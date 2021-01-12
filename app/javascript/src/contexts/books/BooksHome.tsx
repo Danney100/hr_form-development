@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllBooks } from '@/actions/actions/books';
@@ -18,6 +18,18 @@ const BooksHome = (): JSX.Element => {
     dispatch(getAllBooks());
   }, []);
 
+  const [width, setWidth] = useState(window.outerWidth);
+
+  useEffect(() => {
+    const onHandleResize = (e) => {
+      setWidth(e.target.outerWidth);
+    }
+    window.addEventListener('resize', onHandleResize, true)
+    return () => {
+      window.removeEventListener('resize', onHandleResize, true);
+    }
+  })
+
   const renderBooks = () => {
     if (allBooks) {
       return allBooks.map((book: Book) => (
@@ -28,20 +40,41 @@ const BooksHome = (): JSX.Element => {
     }
   };
 
+  const isMobile = width < 500
+  console.log(width);
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <SidebarMobile />
-      <Layout>
-        <Header />
-        <Content>
-          <h1>Books</h1>
-          <Button label="Test Button" />
-          {renderBooks()}
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>Demo App ©2021</Footer>
+    <>
+      <Layout style={{ minHeight: '100vh', background: '#f8f9fa' }}>
+        {isMobile ? (
+          <>
+            <SidebarMobile />
+            <div style={{ 
+             textAlign: 'center', 
+             position:'absolute', 
+             bottom:0, 
+             width:'100%' 
+          }}>
+              <Button customClass="logout" label="LOG OUT" />
+            </div>
+          </>
+        ) : (
+          <Layout>
+                        <Header />
+            <Content>
+             <h1>Books</h1>
+             <Button label="Test Button" />
+             {renderBooks()}
+           </Content>
+           <Footer style={{ 
+             textAlign: 'center', 
+             position:'absolute', 
+             bottom:0, 
+             width:'100%' 
+          }}>Demo App ©2021</Footer>
+          </Layout>
+        )}
       </Layout>
-      
-    </Layout>
+    </>
   );
 };
 

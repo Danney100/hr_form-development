@@ -7,10 +7,10 @@ import Button from '@/components/button/Button';
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-const Sidebar = () => {
+const SidebarMobile = () => {
 
     return (
-      <Sider className="app-sidebar"  trigger={null}>
+      <div className="app-sidebar">
         <Menu className="app-sidebar-menu" defaultSelectedKeys={['1']} mode="inline">
           <SubMenu className="bt bb" key="sub1" title="DASHBOARD">
             <Menu.Item key="1">Task List</Menu.Item>
@@ -40,9 +40,8 @@ const Sidebar = () => {
             PROFILE
           </Menu.Item>
         </Menu>
-        <Button customClass="logout" label="LOG OUT" />
-      </Sider>
+      </div>
     )
 };
 
-export default Sidebar;
+export default SidebarMobile;
