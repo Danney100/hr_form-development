@@ -7,7 +7,8 @@ export function* getAllBooksSaga(
   _action: GetAllBooks,
 ) {
   try {
-    const url = 'api/v1/books';
+    // const url = 'api/v1/books';
+    const url = 'api/';
 
     const response = yield call(Api.utility.get, url);
 
