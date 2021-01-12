@@ -1,0 +1,31 @@
+.app-sidebar-menu {
+    margin-left:0 !important;
+    position: relative;
+    background-color: #f8f9fa !important;
+}
+
+.app-sidebar .logo {
+    padding-left:24px;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.menu {
+    background-color: #f8f9fa;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.menu::after {
+    border-right: none;
+}
+
+.app-sidebar .bb {
+    border-bottom: 1px solid #e8e9ee;
+}
+
+.app-sidebar .bt {
+    border-top: 1px solid #e8e9ee;
+}
+
+.app-sidebar .logout {
+    position: absolute;
+    bottom: 0;
+    margin: 30px;
+}

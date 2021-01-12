@@ -23,6 +23,10 @@ export interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+   /**
+   * custom class optional
+   */
+  customClass?: string;
 }
 
 /**
@@ -33,6 +37,7 @@ const Button: React.FC<ButtonProps> = ({
   size = 'medium',
   backgroundColor,
   label,
+  customClass = '',
   ...props
 }) => {
   const mode = primary
@@ -41,7 +46,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
+      className={['storybook-button', `storybook-button--${size}`, mode, customClass].join(
         ' ',
       )}
       style={{ backgroundColor }}
