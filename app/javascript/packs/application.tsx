@@ -6,6 +6,7 @@ import { Router } from 'react-router-dom';
 import store from '@/actions/configureStore';
 import BooksHome from '@/contexts/books/BooksHome';
 import history from '@/contexts/app/history';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 document.addEventListener('DOMContentLoaded', () => {
   require('@rails/ujs').start();
