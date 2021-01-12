@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllBooks } from '@/actions/actions/books';
 import Button from '@/components/button/Button';
 import SidebarMobile from '@/components/layout/sidebar-mobile/sidebar-mobile';
-import Header from '@/components/layout/header/header';
+import Header from '@/components/layout/header/Header';
 import SidebarDesktop from '@/components/layout/sidebar-desktop/sidebar-desktop';
 
 import { selectAllBooks } from '@/selectors/books';
