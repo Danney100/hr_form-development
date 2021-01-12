@@ -52,11 +52,11 @@ const BooksHome = (): JSX.Element => {
           <>
             <SidebarMobile />
             <div style={{ 
-             textAlign: 'center', 
-             position:'absolute', 
-             bottom:0, 
-             width:'100%' 
-          }}>
+              textAlign: 'center', 
+              position:'absolute', 
+              bottom:0, 
+              width:'100%' 
+            }}>
               <Button customClass="logout" label="LOG OUT" />
             </div>
           </>

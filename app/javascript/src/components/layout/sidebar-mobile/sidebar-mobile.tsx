@@ -1,12 +1,25 @@
 import './sidebar-mobile.css';
 import React, { useState } from 'react';
-import {  Menu } from 'antd';
+import {  Menu, Row, Col } from 'antd';
+import IconLogo from 'assets/images/ui-logo.svg';
+import IconClose from 'assets/images/ui-icons-x-standard.svg';
+
 const { SubMenu } = Menu;
 
 const SidebarMobile = () => {
 
     return (
       <div className="app-sidebar">
+        <Row>
+          <Col span={4}>
+            <img src={IconClose} width="14" height="14" style={{ margin:'28px 129px 23px 20px'}}/>
+          </Col>
+
+          <Col span={20}>
+            <img src={IconLogo} width="50" height="50"style={{marginLeft: '300px', marginTop: '10px'}}/>
+          </Col>
+
+        </Row>
         <Menu className="app-sidebar-menu" defaultSelectedKeys={['1']} mode="inline">
           <SubMenu className="bt bb" key="sub1" title="DASHBOARD">
             <Menu.Item key="1">Task List</Menu.Item>
