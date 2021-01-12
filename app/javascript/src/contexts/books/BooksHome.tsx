@@ -38,7 +38,7 @@ const BooksHome = (): JSX.Element => {
           <Button label="Test Button" />
           {renderBooks()}
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Demo App ©2021 Created by Ari</Footer>
+        <Footer style={{ textAlign: 'center' }}>Demo App ©2021</Footer>
       </Layout>
       
     </Layout>
