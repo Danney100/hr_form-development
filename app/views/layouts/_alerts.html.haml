@@ -1,0 +1,8 @@
+.alert__container
+  - flash.each do |type, body|
+    %div{class: "alert alert--#{type}"}
+      - if body.is_a?(Array)
+        - body.each do |message|
+          .alert__message= message.html_safe
+      - else
+        .alert__message= body.html_safe

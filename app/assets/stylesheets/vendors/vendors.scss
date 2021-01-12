@@ -1,0 +1,4 @@
+// NOTE: Vendor styles are for the import of 3rd party libraries. ex: Bootstrap or Bulma.
+
+// NOTE: Rather than importing from a local _bulma.scss partial, this comes from https://github.com/joshuajansen/bulma-rails. Creating a _bulma.scss partial will cause issues with the import of Bulma.
+@import "bulma";

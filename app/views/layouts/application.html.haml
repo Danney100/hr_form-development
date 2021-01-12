@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title RailsTemplate
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application"
+    = javascript_pack_tag "application"
+  %body
+    -# NOTE: This content class allows for heading sizes, weights, etc to work with Bulma. Otherwise Bulma will make everything the same size and weight.
+    .content
+      = render partial: "layouts/header"
+      = render partial: "layouts/alerts"
+      = yield
