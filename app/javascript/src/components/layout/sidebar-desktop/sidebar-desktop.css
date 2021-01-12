@@ -1,0 +1,35 @@
+.app-sidebar-desktop {
+  background: #e5eaf0 !important;
+}
+
+.app-sidebar-desktop .app-sidebar-sider,  .app-sidebar-desktop .app-sidebar-menu{
+  background: #e5eaf0 !important;
+  margin: 0;
+}
+
+.app-sidebar-desktop .app-sidebar-menu .menu{
+  height: 81px;
+  margin: 0 !important;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.app-sidebar-desktop .app-sidebar-menu .menu.menu-close{
+    height: 53px !important;
+    font-size: 15px;
+  }
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.menu {
+    background-color: #4a576d;
+    color: white;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.app-sidebar-menu::after {
+    border-right: none;
+}
+
+.sidebar-icon {
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-bottom: -8px;
+}

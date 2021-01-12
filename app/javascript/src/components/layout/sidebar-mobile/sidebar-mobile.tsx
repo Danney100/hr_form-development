@@ -1,10 +1,6 @@
 import './sidebar-mobile.css';
-
 import React, { useState } from 'react';
-import { Layout, Menu } from 'antd';
-import Button from '@/components/button/Button';
-
-const { Sider } = Layout;
+import {  Menu } from 'antd';
 const { SubMenu } = Menu;
 
 const SidebarMobile = () => {

@@ -3,11 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllBooks } from '@/actions/actions/books';
 import Button from '@/components/button/Button';
-import SidebarMobile from '@/components/layout/sidebar/sidebar-mobile';
+import SidebarMobile from '@/components/layout/sidebar-mobile/sidebar-mobile';
+import Header from '@/components/layout/header/header';
+import SidebarDesktop from '@/components/layout/sidebar-desktop/sidebar-desktop';
+
 import { selectAllBooks } from '@/selectors/books';
 import { Book } from '@/types/book';
 import { Layout } from 'antd';
-const { Header, Content, Footer } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 const BooksHome = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -59,18 +62,13 @@ const BooksHome = (): JSX.Element => {
           </>
         ) : (
           <Layout>
-                        <Header />
-            <Content>
-             <h1>Books</h1>
-             <Button label="Test Button" />
-             {renderBooks()}
-           </Content>
-           <Footer style={{ 
-             textAlign: 'center', 
-             position:'absolute', 
-             bottom:0, 
-             width:'100%' 
-          }}>Demo App ©2021</Footer>
+            <Header />
+            <Layout>
+              <SidebarDesktop />
+              <Content style={{background: "#00345d", padding:"20px"}}>
+                <h1 style={{color:"white"}}>Content Here</h1>
+              </Content>
+            </Layout>
           </Layout>
         )}
       </Layout>
