@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllBooks } from '@/actions/actions/books';
 import Button from '@/components/button/Button';
-import Sidebar from '@/components/layout/sidebar/Sidebar';
+import SidebarMobile from '@/components/layout/sidebar/sidebar-mobile';
 import { selectAllBooks } from '@/selectors/books';
 import { Book } from '@/types/book';
 import { Layout } from 'antd';
@@ -30,7 +30,7 @@ const BooksHome = (): JSX.Element => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sidebar />
+      <SidebarMobile />
       <Layout>
         <Header />
         <Content>
