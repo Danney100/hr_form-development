@@ -2,10 +2,7 @@
     margin-left:0 !important;
     position: relative;
     background-color: #f8f9fa !important;
-}
-
-.app-sidebar .logo {
-    padding-left:24px;
+    margin-top: 0 !important;
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.menu {

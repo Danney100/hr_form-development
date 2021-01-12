@@ -1,42 +1,25 @@
+import './header.css';
 import React from 'react';
+import {  Menu } from 'antd';
+import IconLogo from 'assets/images/ui-logo.svg';
 
-const Header = ({title}) => {
+const Header = () => {
     return (
-        <div className="container-scroller" style={{ zIndex: 1 }}>
-          <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div className="navbar-brand-wrapper d-flex justify-content-center">
-            <div className="navbar-brand-inner-wrapper d-flex align-items-center w-100">
-              <button
-                className="navbar-toggler navbar-toggler align-self-center mr-4"
-                type="button"
-                onClick={() => {
-                }}
-              >
-                Nav
-              </button>
-            </div>
+      <header className="ant-layout-header app-header">
+        <div style={{display: 'flex'}}>
+          <div className="logo" >
+            <img src={IconLogo} width="50" height="50"/>
           </div>
+          <Menu className="nav-list" theme="light" mode="horizontal" defaultSelectedKeys={['2']}>
+            <Menu.Item className="nav-item" key="1">DASHBOARD</Menu.Item>
+            <Menu.Item className="nav-item" key="2">PACKETS</Menu.Item>
+            <Menu.Item className="nav-item" key="3">TEAM PACKETS</Menu.Item>
+            <Menu.Item className="nav-item" key="3">ADMIN</Menu.Item>
+            <Menu.Item className="nav-item" key="3">PROFILE</Menu.Item>
+          </Menu>
+        </div>
 
-            <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                <ul className="navbar-nav ml-4 mr-lg-4 w-100">
-                    <li className="nav-item nav-search d-none d-lg-block w-100 title-page">
-                        Dashboard
-                    </li>
-                    <li className="nav-item nav-search d-none d-lg-block w-100 title-page">
-                        PACKETS
-                    </li>
-                    <li className="nav-item nav-search d-none d-lg-block w-100 title-page">
-                        TEAM PACKETS
-                    </li>
-                </ul>
-
-                <ul className="navbar-nav navbar-nav-right">
-                    <li>Admin</li>
-                    <li>Profile</li>
-                </ul>
-          </div>
-        </nav>
-      </div>
+      </header>
     )
 }
 
