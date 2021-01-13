@@ -14,8 +14,8 @@ const Header = () => {
             <Menu.Item className="nav-item" key="1">DASHBOARD</Menu.Item>
             <Menu.Item className="nav-item" key="2">PACKETS</Menu.Item>
             <Menu.Item className="nav-item" key="3">TEAM PACKETS</Menu.Item>
-            <Menu.Item className="nav-item" key="3">ADMIN</Menu.Item>
-            <Menu.Item className="nav-item" key="3">PROFILE</Menu.Item>
+            <Menu.Item className="nav-item" key="4">ADMIN</Menu.Item>
+            <Menu.Item className="nav-item" key="5">PROFILE</Menu.Item>
           </Menu>
         </div>
 
