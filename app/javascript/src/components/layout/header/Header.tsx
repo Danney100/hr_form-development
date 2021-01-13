@@ -13,7 +13,7 @@ const Header = () => {
           <Menu className="nav-list" theme="light" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item className="nav-item" key="1">DASHBOARD</Menu.Item>
             <Menu.Item className="nav-item" key="2">PACKETS</Menu.Item>
-            <Menu.Item className="nav-item" key="3">TEAM PACKETS</Menu.Item>
+            <Menu.Item className="nav-item" key="3" style={{marginRight: '100px'}}>TEAM PACKETS</Menu.Item>
             <Menu.Item className="nav-item" key="4">ADMIN</Menu.Item>
             <Menu.Item className="nav-item" key="5">PROFILE</Menu.Item>
           </Menu>
