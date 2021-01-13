@@ -9,8 +9,8 @@ import SidebarDesktop from '@/components/layout/sidebar-desktop/sidebar-desktop'
 
 import { selectAllBooks } from '@/selectors/books';
 import { Book } from '@/types/book';
-import { Layout } from 'antd';
-const { Content, Footer, Sider } = Layout;
+import { Layout, Row, Col } from 'antd';
+const { Content } = Layout;
 
 const BooksHome = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -44,7 +44,6 @@ const BooksHome = (): JSX.Element => {
   };
 
   const isMobile = width < 500
-  console.log(width);
   return (
     <>
       <Layout style={{ minHeight: '100vh', background: '#f8f9fa' }}>
@@ -57,7 +56,7 @@ const BooksHome = (): JSX.Element => {
               bottom:0, 
               width:'100%' 
             }}>
-              <Button customClass="logout" label="LOG OUT" />
+              <Button width="224px" label="LOG OUT" />
             </div>
           </>
         ) : (
@@ -65,8 +64,19 @@ const BooksHome = (): JSX.Element => {
             <Header />
             <Layout>
               <SidebarDesktop />
-              <Content style={{background: "#00345d", padding:"20px"}}>
-                <h1 style={{color:"white"}}>Content Here</h1>
+              <Content style={{background: "#f8f9fa"}}>
+                <div style={{background: "#00345d", padding:"10px"}}>
+                  <Row>
+                    <Col span={6} style={{textAlign:'center'}}>
+                      <h1 style={{color:"white", margin: 0}}>PACKET NAME</h1>
+                    </Col>
+                    <Col span={18} style={{display: 'flex', justifyContent: 'flex-end'}}>
+                      <Button label="PRINT FORMS" width="176px" backgroundColor="white" customClass="ml-5"/>
+                      <Button label="DENY PACKET" width="176px" backgroundColor="white" customClass="ml-5"/>
+                      <Button label="APPROVE PACKET" width="176px" backgroundColor="white" customClass="ml-5 mr-15"/>
+                    </Col>
+                  </Row>
+                </div>
               </Content>
             </Layout>
           </Layout>
